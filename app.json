@@ -1,7 +1,12 @@
 {
   "expo": {
+<<<<<<< HEAD
     "name": "selfcheckout1",
     "slug": "selfcheckout1",
+=======
+    "name": "selfcheckout-app",
+    "slug": "selfcheckout-app",
+>>>>>>> c8a5f49b6ab7ca8f5ce820a8406f3797b2b2b321
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
