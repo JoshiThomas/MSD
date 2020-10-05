@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, StyleSheet, Text, TextInput, View, Image, StatusBar } from 'react-native';
 import { styles } from './styles'
 
+
+
 /**
  * Home screen
  */
@@ -20,17 +22,17 @@ export default class Home extends React.Component {
         return (
             <View style={styles.container}>
                 <View style={styles.flex}>
-                    <Text style={styles.barHome}>Welcome To Self Checkout</Text>
+                    <Text style={styles.titleView}>Welcome To Self Checkout</Text>
                 </View>
                 <View style={styles.flex}>
-                    <Image source={require('../assets/cart.png')} style={styles.icon} />
-
-                    <Text>asd
-                    Please enter your details.
-              </Text>
+                    <Image source={require('../../assets/cart.png')} style={styles.icon} />
+                    <Text>
+                        Please enter your details.
+                    </Text>
                     <TextInput placeholder="Mobile Number" style={styles.textInput}
                         onChangeText={mobileNumber => this.setState({ mobileNumber })}
-                    ></TextInput>
+                    >
+                    </TextInput>
 
                     <TextInput placeholder="Email Address" style={styles.textInput}
                         onChangeText={emailAddress => this.setState({ emailAddress })}
@@ -42,14 +44,25 @@ export default class Home extends React.Component {
                 </Text>
                     </View>
 
-                    <View style={styles.padding10, styles.button}>
+                    <View style={styles.padding10, styles.buttonView}>
                         <Button
-                            title="Scan QR Code"
+                            title="Sign Me In" style={styles.button}
                             onPress={() => navigate(
-                                'SignIn', { emailAddress: this.state.emailAddress, 
-                                    mobileNumber: this.state.mobileNumber,
-                                    nav: this.props.navigation
-                                 }
+                                'SignedIn', {
+                                emailAddress: this.state.emailAddress,
+                                mobileNumber: this.state.mobileNumber
+                            }
+                            )}
+                        />
+                    </View>
+                    <View style={styles.buttonView}>
+                        <Button
+                            title="Scan QR Code" style={styles.button}
+                            onPress={() => navigate(
+                                'SignIn', {
+                                emailAddress: this.state.emailAddress,
+                                mobileNumber: this.state.mobileNumber
+                            }
                             )}
                         />
                     </View>

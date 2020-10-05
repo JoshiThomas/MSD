@@ -12,14 +12,16 @@
 import React, { useState, useEffect } from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import { Form, TextValidator } from 'react-native-validator-form';
 
 
 
 // Components
-import Home from './src/Home';
-import SignIn from './src/SignIn';
+import Home from './src/pages/Home';
+import SignIn from './src/pages/SignIn';
+import SignedIn from './src/pages/SignedIn';
 
- 
+
 /**
  * 
  * createStackNavigator
@@ -28,11 +30,23 @@ import SignIn from './src/SignIn';
  *
 */
 const Navigator = createStackNavigator({
-    Home: { screen: Home },
-    SignIn: { screen: SignIn },
+  Home: {
+    screen: Home,
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: 'Home',
+      headerTitleStyle: { alignSelf: 'center' }
+    }),
+
+  },
+  SignIn: {
+    screen: SignIn, navigationOptions: ({ navigation }) => ({
+      headerTitle: 'Sign In with QR Code',
+    }),
+  },
+  SignedIn: { screen: SignedIn },
 });
 
-/**
+/** 
  * createAppContainer
  *
  * Responsible for managing app state and linking
