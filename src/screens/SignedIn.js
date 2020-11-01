@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button, StyleSheet, Text, TextInput, View, Image, ActivityIndicator, FlatList } from 'react-native';
-import { styles } from './styles'
+import { styles } from '../components/Styles'
 import customer from '../api/customer';
 
 /**

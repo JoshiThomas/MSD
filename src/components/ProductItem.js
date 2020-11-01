@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, StyleSheet, Text, TextInput, View, Image, StatusBar, TouchableOpacity }
   from 'react-native';
-import { styles } from "../screens/styles";
+import { styles } from "./Styles";
 
 const ProductItem = ({ productName, productImage, price }) => {
   console.log(productImage);

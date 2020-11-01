@@ -1,11 +1,14 @@
+/**
+ * 
+ * The home screen for the selfcheckout app.
+ * 
+ */
+
 import React, { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View, Image, StatusBar } from 'react-native';
 import config from '../../config';
-import { styles } from './styles'
+import { styles } from '../components/Styles'
 
-/**
- * Home screen 
- */
 const Home = ({ navigation }) => {
 
     const [mobile, setMobile] = useState('');
@@ -48,10 +51,6 @@ const Home = ({ navigation }) => {
                 </View>
 
                 <View style={styles.padding10, styles.buttonView}>
-                    {/* <Button
-                        title="Sign Me In" style={styles.button}
-                        onPress={() => navigation.navigate("SignedIn")}
-                    /> */}
                     <Button
                         title="Sign Me In" style={styles.button}
                         onPress={() => navigation.navigate(

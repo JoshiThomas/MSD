@@ -1,6 +1,14 @@
+/**
+ * 
+// Test file for FlatList 
+   The code is used inside scan products screen file.
+ * 
+ */
+
+
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button, FlatList } from 'react-native';
-import { styles } from './styles'
+import { styles } from '../components/Styles'
 
 const ListScreen = () => {
 

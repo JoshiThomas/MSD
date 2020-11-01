@@ -1,12 +1,19 @@
+/**
+ * 
+// Playground for reusable component.
+// This can be usedfor the product listing page.
+
+ * 
+ */
+
+
 import React from "react";
 import { Button, StyleSheet, Text, TextInput, View, Image, StatusBar, TouchableOpacity }
   from 'react-native';
-import { styles } from './styles'
+import { styles } from '../components/Styles'
 import ImageDetail from '../components/ImageDetail';
 
 const ImageScreen = ({ navigation }) => {
-  console.log('XXXXXXX');
-  //console.log(navigation.navigation);
   return (
     <View>
       <Text>Image screen!</Text>

@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import {
     Button, StyleSheet, Text, TextInput, View, Image, ActivityIndicator, FlatList, TouchableOpacity
 } from 'react-native';
-import { styles } from './styles'
+import { styles } from '../components/Styles'
 import customer from '../api/customer';
 import ProductItem from '../components/ProductItem';
 
@@ -54,12 +54,11 @@ const ScanProduct = ({ navigation }) => {
                     )}
                 />
             </View>
-            <View>
-                <Image source={(require('../../assets/tryme.png'))}
-                    style={styles.tryme}
-                >
-                </Image>
-            </View>
+            <Button 
+                        title="Scan Barcode" style={styles.buttonScann}
+                        onPress={() => navigation.navigate("SignIn")}
+                    />
+            
         </View>
     );
 

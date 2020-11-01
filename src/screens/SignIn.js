@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
-import navigationService from './Navigator';
-
 
 const navigationRef = React.createRef();
 
@@ -13,11 +11,7 @@ const navigationRef = React.createRef();
 //     // navigationRef.current.navigate(name, params);
 //     this.props.navigation.navigate('Home')
 // }
-const HomeScreen = ({ navigation }) => {
-    useEffect(() => {
-        navigationService.navigation = navigation;
-    }, [navigation]);
-}
+ 
 
 
 export default function App() {

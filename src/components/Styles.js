@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
     },
     textInput: {
         width: '80%', borderBottomWidth: 1,
-        borderBottomColor: 'black', paddingBottom: 10, paddingTop: 10, textAlignVertical: 'top'
+        borderColor: 'grey', paddingBottom: 10, paddingTop: 10, textAlignVertical: 'top',
+        marginBottom: 10
     },
     barHome: {
         fontWeight: 'bold', borderColor: 'white', borderWidth: 2,
@@ -19,8 +20,26 @@ const styles = StyleSheet.create({
     icon: {
         width: 40, height: 40
     },
+    productImage: {
+        width: '35%', height: 50, marginTop: '2%'
+    },
+    offers: {
+        width: '100%', height: '50%',
+        marginTop: '25%',
+        transform: [{ scale: 1.05 }],
+        resizeMode: 'contain',
+    },
+    tryme: {
+        width: '100%', height: '40%',
+        marginTop: '10%',
+        transform: [{ scale: 1.20 }],
+        resizeMode: 'contain',
+    },
     padding10: {
         padding: 10
+    },
+    padding5: {
+        padding: 5
     },
     paddingTop10: {
         paddingTop: 10
@@ -30,7 +49,14 @@ const styles = StyleSheet.create({
         width: 250,
     },
     button: {
-        textTransform: 'lowercase'    
+        textTransform: 'lowercase'
+    },
+    buttonScann: {
+        textTransform: 'lowercase',
+        marginTop:'10%'
+    },
+    buttonAddTocart: {
+        width: '90%',
     },
     textPara: {
         textAlign: 'center', // <-- the magic
@@ -39,6 +65,12 @@ const styles = StyleSheet.create({
         marginTop: 0,
         width: 300,
         backgroundColor: 'yellow',
+    },
+    textError: {
+        textAlign: 'left', // <-- the magic
+        marginTop: 0,
+        width: 300,
+        color: 'red',
     },
     containerView: {
         flex: 1,
@@ -57,9 +89,15 @@ const styles = StyleSheet.create({
         width: 260,
         height: 200,
     },
-    productList:{
-        marginVertical:50,
-    }
+    productList: {
+        marginVertical: 10,
+    },
+    productItem: { justifyContent: 'center', width: '90%' },
+    price: { width: "50%", paddingTop: '2%', paddingLeft: "20%", fontWeight: 'normal', fontSize: 15 },
+    productButtonScan: {
+        width: "50%", paddingTop: '2%'
+    },
+    productNameItem: { fontWeight: 'normal', fontSize: 15 }
 });
 
 export { styles }   
